@@ -18,7 +18,7 @@ for (let hour = nine.clone(); hour.isSameOrBefore(toFive); hour.add(1, "h")) {
   // console.log(hour.format());
   const clonedList = $("#clonedDiv").clone();
   clonedList.removeAttr("id");
-  clonedList.attr("data-hour", hour.hour());
+  clonedList.attr("data-index", hour.hour());
   clonedList.find("#hour").text(hour.format("HA"));
 
   //   $(".todo-section")
@@ -26,3 +26,5 @@ for (let hour = nine.clone(); hour.isSameOrBefore(toFive); hour.add(1, "h")) {
   //     .removeAttr("id");
   $(".todo-section").append(clonedList);
 }
+
+console.log();

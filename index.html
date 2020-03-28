@@ -3,28 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Day Planner</title>
   </head>
   <body>
     <div class="container">
       <div id="header">
         <h1>Daily Planner</h1>
-        <p>Date: <span id="date"></span></p>
+        <p>A simple calendar app for scheduling your work day.</p>
+        <span id="date"></span>
       </div>
-      <form id="todo-form">
-        <label for="todo-prompt">Add to your list:</label>
-        <input type="text" name="todo-input" id="todo-input" />
-        <input type="submit" value="Save" />
-      </form>
     </div>
 
-    <div class="todo-section" id="todo-section"></div>
+    <div class="randomWhiteLine"></div>
+
+    <div class="todo-container">
+      <div class="todo-section" id="todo-section"></div>
+    </div>
 
     <div class="listedToDos" id="clonedDiv">
       <div id="hour"></div>
-      <input type="text" class="todo-text" />
-      <div class="save-button">Save</div>
+      <input class="inputBox" type="text" class="todo-text" />
+      <i class="material-icons md-36">save</i>
+      <!-- <button class="save-button">Save</button> -->
     </div>
 
     <script
