@@ -9,9 +9,10 @@ const toFive = moment()
   .hour(17)
   .startOf("hour");
 
-let todolist;
+let todolist = {};
 
 const storedToDos = localStorage.getItem("to-do");
+console.log(storedToDos);
 if (storedToDos !== null) {
   todolist = JSON.parse(storedToDos);
 } else {
@@ -25,14 +26,15 @@ for (let hour = nine.clone(); hour.isSameOrBefore(toFive); hour.add(1, "h")) {
   clonedList.attr("data-index", currentTime);
   const thisHour = hour.format("HA");
   clonedList.find("#hour").text(thisHour);
+  console.log(currentTime);
 
-  if (currentTime < present) {
+  if (currentTime > present) {
     $("#hour").addClass("past");
   }
   if (currentTime === present) {
     $("#hour").addClass("present");
   }
-  if (currentTime > present) {
+  if (currentTime < present) {
     $("#hour").addClass("future");
   }
 

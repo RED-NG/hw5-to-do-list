@@ -68,7 +68,7 @@ body {
 }
 
 #hour.present {
-  background-color: lightgreen;
+  background-color: blue;
 }
 
 #hour.future {
