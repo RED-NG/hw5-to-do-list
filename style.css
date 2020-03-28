@@ -3,7 +3,7 @@ body {
   color: white;
 }
 
-.randomWhiteLine {
+.randomWhiteLineForAesthetic {
   margin-top: 2rem;
   height: 2px;
   background-color: #eaeff5;
@@ -32,7 +32,7 @@ body {
   margin-bottom: 2px;
   font-size: 1em;
   line-height: 1.5;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   background-color: purple;
   color: white;
   display: flex;
@@ -45,14 +45,14 @@ body {
   background-color: purple;
   width: 15%;
   height: 100%;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .container {
   text-align: center;
 }
 
-.inputBox {
+#inputBox {
   background-color: lightgreen;
   width: 100%;
   color: white;
@@ -61,4 +61,16 @@ body {
 
 .material-icons.md-36 {
   font-size: 36px;
+}
+
+#hour.past {
+  background-color: red;
+}
+
+#hour.present {
+  background-color: lightgreen;
+}
+
+#hour.future {
+  background-color: black;
 }
