@@ -1,5 +1,4 @@
 const now = moment().startOf("hour");
-// const hour = now.hour();
 $("#date").text(now.format("DD MMM YYYY"));
 
 const nine = moment()
@@ -9,22 +8,17 @@ const toFive = moment()
   .hour(17)
   .startOf("hour");
 
-// console.log("from time: ", nine.format());
-// console.log("to time: ", toFive.format());
-
-// $("#clonedDiv").hide();
-
 for (let hour = nine.clone(); hour.isSameOrBefore(toFive); hour.add(1, "h")) {
-  // console.log(hour.format());
   const clonedList = $("#clonedDiv").clone();
   clonedList.removeAttr("id");
   clonedList.attr("data-index", hour.hour());
   clonedList.find("#hour").text(hour.format("HA"));
-
-  //   $(".todo-section")
-  //     .append($("#clonedDiv").clone())
-  //     .removeAttr("id");
   $(".todo-section").append(clonedList);
 }
 
-console.log();
+$(".todo-section").on("click", "#saveBtn", function() {
+  const hour = $(this)
+    .parent()
+    .attr("data-index");
+  console.log(hour);
+});
