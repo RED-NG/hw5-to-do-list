@@ -42,7 +42,7 @@ body {
 #hour {
   text-align: center;
   font-size: 1rem;
-  background-color: purple;
+  /* background-color: purple; */
   width: 15%;
   height: 100%;
   /* border-radius: 15px; */
@@ -63,14 +63,14 @@ body {
   font-size: 36px;
 }
 
-#hour.past {
+.past {
   background-color: red;
 }
 
-#hour.present {
+.present {
   background-color: blue;
 }
 
-#hour.future {
+.future {
   background-color: black;
 }

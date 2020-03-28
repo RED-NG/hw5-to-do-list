@@ -20,27 +20,32 @@ if (storedToDos !== null) {
 }
 
 for (let hour = nine.clone(); hour.isSameOrBefore(toFive); hour.add(1, "h")) {
-  const clonedList = $("#clonedDiv").clone();
-  clonedList.removeAttr("id");
   const currentTime = hour.hour();
+  const clonedList = $("#clonedDiv").clone();
+
+  if (currentTime < present) {
+    clonedList.addClass("past");
+  }
+  if (currentTime === present) {
+    clonedList.addClass("present");
+  }
+  if (currentTime > present) {
+    clonedList.addClass("future");
+  }
+
+  clonedList.removeAttr("id");
   clonedList.attr("data-index", currentTime);
   const thisHour = hour.format("HA");
   clonedList.find("#hour").text(thisHour);
-  console.log(currentTime);
 
-  if (currentTime > present) {
-    $("#hour").addClass("past");
-  }
-  if (currentTime === present) {
-    $("#hour").addClass("present");
-  }
-  if (currentTime < present) {
-    $("#hour").addClass("future");
-  }
+  console.log(hour.hour() + "||" + now.hour());
+  // console.log(currentTime);
+  // console.log("now.hour() is " + present);
+  // console.log("current time " + currentTime);
 
-  if (todolist[hour] !== undefined) {
-    clonedList.find(".inputBox").val(todolist[hour]);
-  }
+  // if (todolist[hour] !== undefined) {
+  //   clonedList.find(".inputBox").val(todolist[hour]);
+  // }
   $(".todo-section").append(clonedList);
 }
 
