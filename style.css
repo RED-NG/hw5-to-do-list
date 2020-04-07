@@ -17,7 +17,9 @@ body {
   background-color: lightskyblue;
   border-radius: 15px;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
 
 .todo-section {
@@ -64,13 +66,17 @@ body {
 }
 
 .past {
-  background-color: red;
+  background-color: black;
 }
 
 .present {
-  background-color: blue;
+  background-color: red;
 }
 
 .future {
-  background-color: black;
+  background-color: blue;
+}
+
+#inputBox {
+  color: darkviolet;
 }
